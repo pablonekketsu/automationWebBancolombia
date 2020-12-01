@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Create user on Utest.com" skipped="0" tests="1" time="34.38" timestamp="2020-12-01 08:22:24"><testcase name="Create a new profile complying with all the page requirements"><error message="The of() method is not supported for By-type Targets" type="java.lang.UnsupportedOperationException">The of() method is not supported for By-type Targets</error><system-err>The of() method is not supported for By-type Targets&#13;
+task.Fill.performAs(Fill.java:41)&#13;
+stepdefinitions.AutomationChallengeStepDefinitions.heComplyingAllTheRequireSteps(AutomationChallengeStepDefinitions.java:23)&#13;
+✽.he complying all the require steps(src/test/resources/features/automationChallenge.feature:10)&#13;
+</system-err></testcase></testsuite>

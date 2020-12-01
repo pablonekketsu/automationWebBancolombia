@@ -5,6 +5,9 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.Hit;
+import net.serenitybdd.screenplay.actions.Scroll;
+import org.openqa.selenium.Keys;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import userinterface.FillPage.*;
 
@@ -35,7 +38,8 @@ public class Fill implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(Enter.theValue(name).into(INPUT_NAME),
+        actor.attemptsTo(
+                Enter.theValue(name).into(INPUT_NAME),
                 Enter.theValue(lastName).into(INPUT_LASTNAME),
                 Enter.theValue(email).into(INPUT_EMAIL),
                 Click.on(INPUT_MONTH),
@@ -43,10 +47,24 @@ public class Fill implements Task {
                 Click.on(INPUT_YEAR),
                 Click.on(BUTTON_NEXT_LOCATION),
                 Enter.theValue(city).into(INPUT_CITY),
-                Click.on(INPUT_CITY),
-                Enter.theValue(zip_code).into(POSTAL_CODE),
-                Click.on(BUTTON_NEXT_LOCATION_TWO)
+                Hit.the(Keys.ARROW_DOWN).keyIn(INPUT_CITY),
+                Hit.the(Keys.ENTER).keyIn(INPUT_CITY)
+
                 );
+        actor.attemptsTo(
+                Enter.theValue(zip_code).into(POSTAL_CODE),
+                Scroll.to(BUTTON_NEXT_LOCATION_TWO),
+                Click.on(BUTTON_NEXT_LOCATION_TWO),
+                Click.on(BUTTON_NEXT_LOCATION_THREE),
+                Enter.theValue(password).into(INPUT_PASSWORD),
+                Enter.theValue(password).into(INPUT_CONFIRM_PASSWORD),
+                Click.on(CHECK_ONE),
+                Click.on(CHECK_TWO),
+                Click.on(CHECK_THREE),
+                Click.on(BUTTON_NEXT_LOCATION_LAST)
+
+        );
 
     }
+
 }

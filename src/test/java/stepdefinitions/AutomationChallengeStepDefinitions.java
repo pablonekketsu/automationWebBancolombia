@@ -4,7 +4,9 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import model.AutomationChallengeData;
+import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actors.OnStage;
+import questions.Answer;
 import task.Fill;
 import task.OpenUp;
 
@@ -34,7 +36,9 @@ public class AutomationChallengeStepDefinitions {
     }
 
     @Then("^the profile is create successful$")
-    public void theProfileIsCreateSuccessful() {
+    public void theProfileIsCreateSuccessful(List<AutomationChallengeData> automationChallengeData) {
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Answer.toThe(automationChallengeData.get(0).getUser())));
+
 
     }
 

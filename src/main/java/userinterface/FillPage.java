@@ -13,7 +13,17 @@ public class FillPage {
     public static final Target  BUTTON_NEXT_LOCATION=Target.the("button to go to the next step:location").located(By.className("btn-blue"));
     public static final Target  INPUT_CITY=Target.the("select the city").located(By.id("city"));
     public static final Target  POSTAL_CODE=Target.the("write the postal code").located(By.id("zip"));
-    public static final Target  BUTTON_NEXT_LOCATION_TWO=Target.the("button to go to the next step:devices").located(By.className("pull-right"));
+    public static final Target  BUTTON_NEXT_LOCATION_TWO=Target.the("button to go to the next step:devices").located(By.className("next-step"));
+    public static final Target  BUTTON_NEXT_LOCATION_THREE=Target.the("button to go to the next step:devices").located(By.className("next-step"));
+    public static final Target  INPUT_PASSWORD=Target.the("where we write the password").located(By.id("password"));
+    public static final Target  INPUT_CONFIRM_PASSWORD=Target.the("where we write the confirm password").located(By.id("confirmPassword"));
+    public static final Target  CHECK_ONE=Target.the("check the option one").located(By.xpath("//*[@id=\"regs_container\"]/div/div[2]/div/div[2]/div/form/div[4]/label/span"));
+    public static final Target  CHECK_TWO=Target.the("check the option one").located(By.xpath("//*[@id=\"regs_container\"]/div/div[2]/div/div[2]/div/form/div[5]/label/span[1]"));
+    public static final Target  CHECK_THREE=Target.the("check the option one").located(By.xpath("//*[@id=\"regs_container\"]/div/div[2]/div/div[2]/div/form/div[6]/label/span[1]"));
+
+    public static final Target  BUTTON_NEXT_LOCATION_LAST=Target.the("button to go to the next step:last").located(By.className("next-step"));
+    public static final Target  MESSAGE_INIT=Target.the("choose a mesaage to confirm the profile ").located(By.className("section-big-title-unauth"));
+
 
 
 

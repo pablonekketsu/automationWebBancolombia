@@ -16,5 +16,5 @@ Feature: Create user on Utest.com
 
     Examples:
       |name|lastName|email|month|day|year|city|zip_code|user|password|
-      |Pablo Andres|Hernandez|pablonekketsu@gmail.com|May|17|1992|Bogota|110111|pablo|example123|
+      |Pablo Andres|Hernandez|pabloneketsu@gmail.com|May|17|1992|Bogota|110111|The Largest Community of Testers in the World|?8EkZ9nD/n6LDE_|
 
